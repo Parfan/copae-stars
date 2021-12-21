@@ -3,16 +3,13 @@ const drawRouter = Router();
 
 drawRouter.post("/", (req, res) => {
 
+    let namesList = req.body.names;
+    namesList = namesList.sort(() => Math.random() - 0.5);
+
     return res.status(200).json({
-        message: "success",
+        response: namesList,
     });
 });
 
-drawRouter.get("/", (req, res) => {
-
-    return res.status(200).json({
-        message: "getted",
-    });
-});
 
 export { drawRouter };
