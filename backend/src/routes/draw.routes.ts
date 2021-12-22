@@ -1,15 +1,14 @@
 import { Router } from "express";
 const drawRouter = Router();
 
-drawRouter.post("/", (req, res) => {
+const drawController = require('../controllers/draw.controller'); 
 
-    let namesList = req.body.names;
-    namesList = namesList.sort(() => Math.random() - 0.5);
-
-    return res.status(200).json({
-        response: namesList,
+drawRouter.post("/", drawController.draw); 
+drawRouter.get("/", (req, res) => {
+    res.status(200).json({
+        message: "Parfan gay"
     });
-});
+})
+drawRouter.post("/team", drawController.drawTeam); 
 
-
-export { drawRouter };
+export { drawRouter  };
