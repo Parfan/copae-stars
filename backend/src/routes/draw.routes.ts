@@ -1,18 +1,14 @@
 import { Router } from "express";
 const drawRouter = Router();
 
-drawRouter.post("/", (req, res) => {
+const drawController = require('../controllers/draw.controller'); 
 
-    return res.status(200).json({
-        message: "success",
-    });
-});
-
+drawRouter.post("/", drawController.draw); 
 drawRouter.get("/", (req, res) => {
-
-    return res.status(200).json({
-        message: "getted",
+    res.status(200).json({
+        message: "Parfan gay"
     });
-});
+})
+drawRouter.post("/team", drawController.drawTeam); 
 
-export { drawRouter };
+export { drawRouter  };
