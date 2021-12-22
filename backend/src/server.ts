@@ -3,6 +3,11 @@ import express from 'express';
 const app = express();
 app.listen(3333, () => console.log('Server is running'));
 
+// Cors 
+import cors from 'cors';
+app.use(cors());
+app.options('*', cors());
+
 // Body parser
 import bodyParser from 'body-parser';
 
