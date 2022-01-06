@@ -1,0 +1,28 @@
+.navbar-container {
+  background-color: blue;
+  padding: 0 30px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    color: white;
+  }
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
