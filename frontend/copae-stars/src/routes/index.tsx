@@ -14,9 +14,7 @@ function PageRoutes() {
     <Routes>
       <Route index element={<Home />} />
       <Route path='draw' element={<Draw />} />
-      <Route path='draw/league' element={<League />}>
-        <Route path='result' element={<></>} />
-      </Route>
+      <Route path='draw/league' element={<League />} />
       <Route path='draw/counter' element={<Counter />} />
       <Route path='draw/number' element={<Numbers />} />
       <Route path='draw/names' element={<Names />} />
